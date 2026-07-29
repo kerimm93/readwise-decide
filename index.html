@@ -59,8 +59,9 @@
     .loading{display:none;min-height:56vh;place-items:center;text-align:center}.loading.active{display:grid}.spinner{position:relative;width:54px;height:54px;margin:0 auto 20px;border:1px solid var(--rule-strong);border-radius:50%;background:var(--surface)}.spinner:after{position:absolute;inset:-1px;border:2px solid transparent;border-top-color:var(--accent);border-radius:50%;content:"";animation:spin .78s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.loading h1{margin:0;font:700 26px var(--serif)}.loading p{margin:8px 0 0;color:var(--ink-dim);font-size:14px}
     .review-card{overflow:hidden}.highlight-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;padding:27px 30px 23px;border-bottom:1px solid var(--rule)}.type{margin:0 0 8px;color:var(--ink-dim);font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.title{margin:0;font:700 clamp(24px,4vw,34px)/1.15 var(--serif);letter-spacing:-.025em;overflow-wrap:anywhere}.meta{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 0;color:var(--ink-mid);font-size:13px}.dot{color:var(--ink-quiet)}
     .open{display:grid;width:44px;height:44px;place-items:center;border:1px solid var(--rule);border-radius:50%;color:var(--ink-mid);background:var(--surface-2);text-decoration:none}.open:hover{border-color:var(--accent-line);color:var(--accent);background:var(--accent-soft)}.open svg{width:18px;height:18px;stroke:currentColor}
-    .highlight-body{padding:clamp(28px,5vw,48px) clamp(26px,6vw,58px) 34px}.quote{position:relative;margin:0;padding-left:24px;font:clamp(21px,3vw,29px)/1.58 var(--serif);letter-spacing:-.012em;white-space:pre-wrap;overflow-wrap:anywhere}.quote:before{position:absolute;top:.12em;bottom:.12em;left:0;width:3px;border-radius:99px;background:var(--accent);content:""}
-    .note{display:none;margin-top:28px;padding:17px 18px;border:1px solid var(--rule);border-radius:var(--r-md);background:var(--surface-2)}.note.visible{display:block}.note-label{display:block;margin-bottom:6px;color:var(--ink-dim);font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.note-text{margin:0;color:var(--ink-mid);font-size:14px;line-height:1.65;white-space:pre-wrap}
+    .highlight-body{padding:clamp(28px,5vw,48px) clamp(26px,6vw,58px) 34px}.quote{position:relative;margin:0;padding-left:24px;font:clamp(21px,3vw,29px)/1.58 var(--serif);letter-spacing:-.012em;overflow-wrap:anywhere}.quote:before{position:absolute;top:.12em;bottom:.12em;left:0;width:3px;border-radius:99px;background:var(--accent);content:""}
+    .note{display:none;margin-top:28px;padding:17px 18px;border:1px solid var(--rule);border-radius:var(--r-md);background:var(--surface-2)}.note.visible{display:block}.note-label{display:block;margin-bottom:6px;color:var(--ink-dim);font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.note-text{margin:0;color:var(--ink-mid);font-size:14px;line-height:1.65}
+    .markdown>:first-child{margin-top:0}.markdown>:last-child{margin-bottom:0}.markdown p{margin:.72em 0}.markdown h1,.markdown h2,.markdown h3,.markdown h4,.markdown h5,.markdown h6{margin:1em 0 .42em;font-family:var(--serif);font-weight:700;line-height:1.22;letter-spacing:-.015em}.markdown h1{font-size:1.35em}.markdown h2{font-size:1.22em}.markdown h3{font-size:1.12em}.markdown h4,.markdown h5,.markdown h6{font-size:1em}.markdown ul,.markdown ol{margin:.72em 0;padding-left:1.45em}.markdown li+li{margin-top:.28em}.markdown blockquote{margin:.85em 0;padding:.1em 0 .1em 1em;border-left:2px solid var(--rule-strong);color:var(--ink-mid)}.markdown code{padding:.12em .32em;border:1px solid var(--rule);border-radius:4px;background:var(--surface-3);font:.78em/1.45 var(--mono);letter-spacing:0}.markdown pre{max-width:100%;margin:.9em 0;padding:.8em 1em;overflow:auto;border:1px solid var(--rule);border-radius:var(--r-sm);background:var(--surface-3)}.markdown pre code{padding:0;border:0;background:transparent;font-size:.72em;white-space:pre}.markdown a{color:var(--accent-deep);text-decoration-color:var(--accent-line);text-underline-offset:3px}.markdown a:hover{color:var(--accent)}.markdown hr{margin:1em 0;border:0;border-top:1px solid var(--rule)}.markdown del{color:var(--ink-dim)}
     .decision-section{position:sticky;z-index:10;bottom:0;margin:18px -12px 0;padding:12px;border:1px solid rgba(207,192,163,.76);border-bottom:0;border-radius:var(--r-lg) var(--r-lg) 0 0;background:rgba(244,236,220,.94);box-shadow:0 -14px 34px rgba(95,72,35,.12);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}.decision-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 3px 10px}.decision-head h2{margin:0;color:var(--ink-mid);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.skip{min-height:36px;padding:0 8px;border:0;color:var(--ink-dim);background:transparent;font-size:12px;font-weight:700}.skip:hover{color:var(--ink);background:rgba(252,248,239,.55)}
     .decision-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.decision{display:grid;grid-template-columns:38px minmax(0,1fr);align-items:center;min-height:78px;padding:13px 16px;border-color:var(--rule);background:rgba(252,248,239,.88);text-align:left}.decision:hover{border-color:var(--accent-line);background:var(--surface);box-shadow:inset 3px 0 var(--accent)}.decision:active{background:var(--accent-soft)}
     .key{display:grid;width:28px;height:28px;place-items:center;border:1px solid var(--rule-strong);border-bottom-width:2px;border-radius:6px;color:var(--ink-mid);background:var(--surface-2);font:800 12px var(--mono)}.decision-label{display:block;font-size:15px;font-weight:800;line-height:1.25}.help{display:block;margin-top:4px;color:var(--ink-dim);font-size:11px;line-height:1.35}.keys{margin:17px 0 0;color:var(--ink-dim);font-size:11px;text-align:center}.keys code{color:var(--ink-mid);font:11px var(--mono)}
@@ -116,7 +117,7 @@
             <div><p class="type" id="sourceType">Quelle</p><h1 class="title" id="sourceTitle"></h1><p class="meta"><span id="author"></span><span class="dot" id="metaDot" aria-hidden="true">·</span><span class="source-name" id="sourceName"></span></p></div>
             <a class="open" id="openLink" href="#" target="_blank" rel="noreferrer" aria-label="Highlight in Readwise öffnen" title="In Readwise öffnen"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 5h5v5M10 14 19 5M19 13v6H5V5h6"/></svg></a>
           </header>
-          <div class="highlight-body"><blockquote class="quote" id="highlightText"></blockquote><aside class="note" id="noteBlock"><span class="note-label">Deine Notiz</span><p class="note-text" id="noteText"></p></aside></div>
+          <div class="highlight-body"><blockquote class="quote markdown" id="highlightText"></blockquote><aside class="note" id="noteBlock"><span class="note-label">Deine Notiz</span><div class="note-text markdown" id="noteText"></div></aside></div>
         </article>
         <section class="decision-section" aria-labelledby="decisionTitle">
           <div class="decision-head"><h2 id="decisionTitle">Was soll daraus werden?</h2><button class="skip" id="skip" type="button" title="Pfeiltaste rechts">Später →</button></div>
@@ -124,7 +125,7 @@
             <button class="decision" type="button" data-decision="make-anki"><span class="key">1</span><span><span class="decision-label">Make Anki</span><span class="help">Später als Mastery Card aufbereiten</span></span></button>
             <button class="decision" type="button" data-decision="make-atomic"><span class="key">2</span><span><span class="decision-label">Make Atomic</span><span class="help">Später als Atomic Note verdichten</span></span></button>
             <button class="decision" type="button" data-decision="reflect"><span class="key">3</span><span><span class="decision-label">Reflect</span><span class="help">Für einen Reflexionsworkflow vormerken</span></span></button>
-            <button class="decision" type="button" data-decision="nothing"><span class="key">0</span><span><span class="decision-label">Nothing</span><span class="help">Bewusst geprüft, aktuell nichts weiter</span></span></button>
+            <button class="decision" type="button" data-decision="nothing"><span class="key">0</span><span><span class="decision-label">Nothing</span><span class="help">Als geprüft markieren und künftig ausblenden</span></span></button>
           </div>
           <p class="keys"><code>1</code> Anki · <code>2</code> Atomic · <code>3</code> Reflect · <code>0</code> Nothing · <code>→</code> später</p>
         </section>
@@ -213,6 +214,88 @@
       function isDecided(highlight){return(highlight.tags||[]).some(function(tag){return DECISION_NAMES.indexOf(tagName(tag))!==-1;});}
       function hostname(url){if(!url)return'';try{return new URL(url).hostname.replace(/^www\./,'');}catch(error){return'';}}
       function category(value){return({books:'Buch',articles:'Artikel',tweets:'Tweet',podcasts:'Podcast',supplementals:'Dokument'})[String(value||'').toLowerCase()]||'Highlight';}
+      function appendInline(parent,text,depth){
+        var value=String(text||''),level=depth||0;
+        if(level>8){parent.appendChild(document.createTextNode(value));return;}
+        var pattern=/`([^`\n]+)`|\[([^\]\n]+)\]\(([^)\s]+)(?:\s+"[^"]*")?\)|\*\*([^*\n]+)\*\*|__([^_\n]+)__|~~([^~\n]+)~~|\*([^*\n]+)\*|_([^_\n]+)_/g;
+        var last=0,match;
+        while((match=pattern.exec(value))){
+          if(match.index>last)parent.appendChild(document.createTextNode(value.slice(last,match.index)));
+          var node;
+          if(match[1]!==undefined){
+            node=document.createElement('code');node.textContent=match[1];parent.appendChild(node);
+          }else if(match[2]!==undefined){
+            if(/^(https?:|mailto:)/i.test(match[3])){
+              node=document.createElement('a');node.href=match[3];node.target='_blank';node.rel='noreferrer noopener';
+              appendInline(node,match[2],level+1);parent.appendChild(node);
+            }else{
+              parent.appendChild(document.createTextNode(match[2]+' ('+match[3]+')'));
+            }
+          }else{
+            node=document.createElement(match[4]!==undefined||match[5]!==undefined?'strong':match[6]!==undefined?'del':'em');
+            appendInline(node,match[4]!==undefined?match[4]:match[5]!==undefined?match[5]:match[6]!==undefined?match[6]:match[7]!==undefined?match[7]:match[8],level+1);
+            parent.appendChild(node);
+          }
+          last=pattern.lastIndex;
+        }
+        if(last<value.length)parent.appendChild(document.createTextNode(value.slice(last)));
+      }
+      function markdownBlockStart(line){
+        return /^ {0,3}(?:```|~~~|#{1,6}\s|>\s?|(?:[-+*]|\d+[.)])\s+|(?:[-*_]\s*){3,})/.test(line);
+      }
+      function renderMarkdown(target,source){
+        while(target.firstChild)target.removeChild(target.firstChild);
+        var lines=String(source||'').replace(/\r\n?/g,'\n').split('\n');
+        var fragment=document.createDocumentFragment(),i=0;
+        while(i<lines.length){
+          var line=lines[i];
+          if(!line.trim()){i+=1;continue;}
+          var fence=line.match(/^ {0,3}(```|~~~)([\w-]*)\s*$/);
+          if(fence){
+            var marker=fence[1],codeLines=[];i+=1;
+            while(i<lines.length&&!new RegExp('^ {0,3}'+marker+'\\s*$').test(lines[i])){codeLines.push(lines[i]);i+=1;}
+            if(i<lines.length)i+=1;
+            var pre=document.createElement('pre'),code=document.createElement('code');
+            if(fence[2])code.className='language-'+fence[2];code.textContent=codeLines.join('\n');pre.appendChild(code);fragment.appendChild(pre);continue;
+          }
+          var heading=line.match(/^ {0,3}(#{1,6})\s+(.+?)\s*#*\s*$/);
+          if(heading){
+            var title=document.createElement('h'+heading[1].length);appendInline(title,heading[2]);fragment.appendChild(title);i+=1;continue;
+          }
+          if(/^ {0,3}(?:([-*_])\s*){3,}$/.test(line)){
+            fragment.appendChild(document.createElement('hr'));i+=1;continue;
+          }
+          if(/^ {0,3}>/.test(line)){
+            var quoted=[];
+            while(i<lines.length){
+              var quoteLine=lines[i].match(/^ {0,3}>\s?(.*)$/);
+              if(!quoteLine)break;
+              quoted.push(quoteLine[1]);i+=1;
+            }
+            var quote=document.createElement('blockquote');renderMarkdown(quote,quoted.join('\n'));fragment.appendChild(quote);continue;
+          }
+          var listMatch=line.match(/^ {0,3}([-+*]|\d+[.)])\s+(.+)$/);
+          if(listMatch){
+            var ordered=/^\d/.test(listMatch[1]),list=document.createElement(ordered?'ol':'ul');
+            while(i<lines.length){
+              var item=lines[i].match(/^ {0,3}([-+*]|\d+[.)])\s+(.+)$/);
+              if(!item||/^\d/.test(item[1])!==ordered)break;
+              var li=document.createElement('li');appendInline(li,item[2]);list.appendChild(li);i+=1;
+            }
+            fragment.appendChild(list);continue;
+          }
+          var paragraphLines=[line];i+=1;
+          while(i<lines.length&&lines[i].trim()&&!markdownBlockStart(lines[i])){paragraphLines.push(lines[i]);i+=1;}
+          var paragraph=document.createElement('p');
+          paragraphLines.forEach(function(part,index){
+            var hardBreak=/ {2,}$/.test(part);
+            appendInline(paragraph,part.replace(/ {2,}$/,''));
+            if(index<paragraphLines.length-1)paragraph.appendChild(document.createElement(hardBreak?'br':'span')).textContent=hardBreak?'':' ';
+          });
+          fragment.appendChild(paragraph);
+        }
+        target.appendChild(fragment);
+      }
       function flatten(books){
         var queue=[];
         (books||[]).forEach(function(book){
@@ -312,17 +395,23 @@
         var item=S.queue[0];
         E.sourceType.textContent=item.category||'Highlight';E.sourceTitle.textContent=item.title||'Ohne Titel';
         E.author.textContent=item.author||'Unbekannte Autorenschaft';E.sourceName.textContent=item.source||'Readwise';E.metaDot.hidden=!(item.author&&item.source);
-        E.highlightText.textContent=item.text||'Dieses Highlight enthält keinen Text.';E.noteText.textContent=item.note||'';E.noteBlock.classList.toggle('visible',!!item.note);
+        renderMarkdown(E.highlightText,item.text||'Dieses Highlight enthält keinen Text.');renderMarkdown(E.noteText,item.note||'');E.noteBlock.classList.toggle('visible',!!item.note);
         var link=item.readwiseUrl||item.sourceUrl||'';E.openLink.hidden=!link;if(link)E.openLink.href=link;
         screen('reviewScreen');document.title=(item.title||'Highlight')+' · Readwise Decider';
       }
       async function decide(name){
         if(busy||!S.queue.length||!DECISIONS[name])return;
-        var item=S.queue[0];setBusy(true);
+        var item=S.queue.shift();
+        setBusy(true);
+        render();
+        window.scrollTo({top:0,behavior:'auto'});
         try{
           await request('/highlights/'+encodeURIComponent(item.id)+'/tags/',{method:'POST',body:JSON.stringify({name:name})});
-          S.queue.shift();saveState();toast('Als „'+DECISIONS[name].label+'“ markiert.','success');render();
-        }catch(error){toast(error&&error.message?error.message:'Der Tag konnte nicht gesetzt werden.','error');}
+          saveState();toast('Als „'+DECISIONS[name].label+'“ markiert.','success');
+        }catch(error){
+          S.queue.unshift(item);saveState();render();window.scrollTo({top:0,behavior:'auto'});
+          toast((error&&error.message?error.message:'Der Tag konnte nicht gesetzt werden.')+' Das Highlight bleibt offen.','error');
+        }
         finally{setBusy(false);}
       }
       function defer(){
@@ -390,7 +479,7 @@
         else if(S.lastLoadedAt)render();
         else loadHighlights();
       }
-      window.ReadwiseDeciderCore={flattenExportBooks:flatten,isDecisionTagged:isDecided,categoryLabel:category};
+      window.ReadwiseDeciderCore={flattenExportBooks:flatten,isDecisionTagged:isDecided,categoryLabel:category,renderMarkdown:renderMarkdown};
       init();
     })();
   </script>
