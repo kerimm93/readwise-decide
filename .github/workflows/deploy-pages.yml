@@ -1,0 +1,69 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build static site and restore icons
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _site/icons
+          cp index.html manifest.webmanifest sw.js _site/
+          for source in .pwa-icon-sources/*.png.b64; do
+            filename="$(basename "${source%.b64}")"
+            base64 --decode "$source" > "_site/icons/$filename"
+          done
+          (cd _site && sha256sum --check ../.pwa-icon-sources/SHA256SUMS)
+          python3 - <<'PY'
+          import struct
+          from pathlib import Path
+
+          expected = {
+              "icon-192.png": (192, 192),
+              "icon-512.png": (512, 512),
+              "icon-maskable-512.png": (512, 512),
+              "apple-touch-icon.png": (180, 180),
+          }
+          signature = b"\x89PNG\r\n\x1a\n"
+          for filename, dimensions in expected.items():
+              data = Path("_site/icons", filename).read_bytes()
+              if not data.startswith(signature):
+                  raise SystemExit(f"Invalid PNG signature: {filename}")
+              actual = struct.unpack(">II", data[16:24])
+              if actual != dimensions:
+                  raise SystemExit(f"Invalid dimensions for {filename}: {actual}, expected {dimensions}")
+              print(f"Verified {filename}: {actual[0]}x{actual[1]}")
+          PY
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
